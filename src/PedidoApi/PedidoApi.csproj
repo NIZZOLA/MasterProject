@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BackOffice.Domain\BackOffice.Domain.csproj" />
+    <ProjectReference Include="..\BackOffice.Infra.Sql\BackOffice.Infra.Sql.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@ using BackOffice.Domain.Entities.Configuration;
 using BackOffice.Infra.Sql.Data;
 using Microsoft.EntityFrameworkCore;
 using ReceptorDePedido;
+using BackOffice.Infra.Sql;
 //using Serilog;
 
 IHost host = Host.CreateDefaultBuilder(args)
@@ -18,8 +19,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         //                //.WriteTo.File(fileName, outputTemplate: template)
         //                .CreateLogger();
 
-        services.AddDbContext<BackOfficeContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("PedidosBackOffice")));
+        services.AddInfraSql(configuration);
 
         services.AddHostedService<PedidosConsumer>();
     })

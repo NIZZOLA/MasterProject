@@ -1,10 +1,12 @@
 using BackOffice.Domain.Entities.Configuration;
 using Microsoft.Extensions.Configuration;
 using PedidoApi;
+using BackOffice.Infra.Sql;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration configuration = builder.Configuration;
 
+builder.Services.AddInfraSql(configuration);
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -7,6 +7,7 @@ public class PagamentoModel : BaseModel
     [ForeignKey("Pedido")]
     public int PedidoId { get; set; }
     public PedidoModel Pedido { get; set; }
+    //public string Descricao { get; set; }
     public decimal Valor { get; set; }
     public DateTime Vencimento { get; set; }
     public DateTime? Pagamento { get; set; }

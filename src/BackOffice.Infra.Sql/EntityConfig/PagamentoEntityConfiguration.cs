@@ -1,11 +1,17 @@
 ﻿using BackOffice.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BackOffice.Infra.Sql.EntityConfig;
 public class PagamentoEntityConfiguration
 {
-    public int PedidoId { get; set; }
-    public decimal Valor { get; set; }
-    public DateTime Vencimento { get; set; }
-    public DateTime? Pagamento { get; set; }
-    public decimal? ValorPago { get; set; }
+    public PagamentoEntityConfiguration(EntityTypeBuilder<PagamentoModel> builder)
+    {
+        builder.ToTable("Pagamentos");
+        //builder
+        //    .Property(b => b.Descricao)
+        //    .HasMaxLength(60)
+        //    .IsRequired();
+
+    }
 }
