@@ -28,6 +28,5 @@ public class ClienteEntityConfiguration
             .Property(b => b.Celular)
             .HasMaxLength(15)
             .IsRequired();
-
     }
 }

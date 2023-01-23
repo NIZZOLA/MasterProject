@@ -17,11 +17,6 @@ public class BackOfficeContext : DbContext
 
         var assembly = typeof(BackOfficeContext).Assembly;
         modelBuilder.ApplyConfigurationsFromAssembly(assembly);
-        /* 
-         new ClienteEntityConfiguration(modelBuilder.Entity<ClienteModel>());
-         new ProdutoEntityConfiguration(modelBuilder.Entity<ProdutoModel>());
-         new PagamentoEntityConfiguration(modelBuilder.Entity<PagamentoModel>());
-         */
     }
 
     public DbSet<BackOffice.Domain.Entities.ClienteModel> Clientes { get; set; } = default!;

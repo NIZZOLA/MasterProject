@@ -1,1 +1,4 @@
-﻿namespace BackOffice.Domain.Interfaces.Repository; public interface IBaseRepository { }
+﻿namespace BackOffice.Domain.Interfaces.Repository; 
+public interface IBaseRepository 
+{
+}

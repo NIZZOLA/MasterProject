@@ -21,7 +21,7 @@ public static class PedidoEndpoints
         })
             .WithName("CreatePedidoModel");
 
-        group.MapGet("/", async (BackOfficeContext pedidoRepository) =>
+        group.MapGet("/api/Pedidos", async (BackOfficeContext pedidoRepository) =>
         {
             return pedidoRepository.Pedidos.ToList();
         })

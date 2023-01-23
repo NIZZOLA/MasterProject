@@ -28,13 +28,21 @@ public class PedidosConsumer : BackgroundService
 
         _logger.LogInformation("Iniciando leitura do Queue:" + _config.Queue);
         var factory = new ConnectionFactory() { HostName = _config.Host, UserName = _config.Username, Password = _config.Password };
-        _connection = factory.CreateConnection();
-        _channel = _connection.CreateModel();
-        _channel.QueueDeclare(queue: _config.Queue,
-                                     durable: true,
-                                     exclusive: false,
-                                     autoDelete: false,
-                                     arguments: null);
+        try
+        {
+            _connection = factory.CreateConnection();
+            _channel = _connection.CreateModel();
+            _channel.QueueDeclare(queue: _config.Queue,
+                                         durable: true,
+                                         exclusive: false,
+                                         autoDelete: false,
+                                         arguments: null);
+        }
+        catch (Exception error)
+        {
+            _logger.LogError("Falha na inicialização da conexão RabbitMq " + error.Message.ToString() , error.StackTrace);
+            throw;
+        }
     }
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
