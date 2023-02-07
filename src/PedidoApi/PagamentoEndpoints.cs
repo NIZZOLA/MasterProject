@@ -1,6 +1,4 @@
-﻿using BackOffice.WebApi.Contracts;
-
-namespace PedidoApi;
+﻿namespace PedidoApi;
 
 public static class PagamentoEndpoints
 {

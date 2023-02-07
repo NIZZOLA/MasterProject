@@ -1,7 +1,6 @@
 ﻿using BackOffice.Domain.Entities;
 using BackOffice.Domain.Entities.Configuration;
 using BackOffice.Infra.Sql.Data;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;

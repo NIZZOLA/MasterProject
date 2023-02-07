@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackOffice.Infra.Sql", "Bac
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ACE513D0-76F2-49F6-BB31-A31BAC6DA416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackOffice.Toolkit.Extensions", "..\BackOffice.Toolkit.Extensions\BackOffice.Toolkit.Extensions.csproj", "{7C6B6AF7-F162-473D-AD7F-5B89B2CC8764}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{ACE513D0-76F2-49F6-BB31-A31BAC6DA416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE513D0-76F2-49F6-BB31-A31BAC6DA416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACE513D0-76F2-49F6-BB31-A31BAC6DA416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6B6AF7-F162-473D-AD7F-5B89B2CC8764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6B6AF7-F162-473D-AD7F-5B89B2CC8764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6B6AF7-F162-473D-AD7F-5B89B2CC8764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6B6AF7-F162-473D-AD7F-5B89B2CC8764}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

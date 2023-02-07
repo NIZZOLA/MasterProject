@@ -1,10 +1,12 @@
-﻿using BackOffice.Domain.Interfaces.Repository;
+﻿using BackOffice.Domain.Entities;
+using BackOffice.Domain.Interfaces.Repository;
 using BackOffice.Infra.Sql.Data;
+using Microsoft.Extensions.Logging;
 
 namespace BackOffice.Infra.Sql.Repository; 
-public class ClienteRepository: BaseRepository, IClienteRepository 
+public class ClienteRepository: BaseRepository<ClienteModel>, IClienteRepository
 {
-	public ClienteRepository(BackOfficeContext context) : base(context)
+	public ClienteRepository(BackOfficeContext context, ILogger<ClienteRepository> logger) : base(context, logger)
 	{
 
 	}

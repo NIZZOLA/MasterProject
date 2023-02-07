@@ -1,6 +1,4 @@
-﻿using BackOffice.Domain.Entities;
-using BackOffice.Domain.Interfaces.Repository;
-using BackOffice.Infra.Sql.Data;
+﻿using BackOffice.Domain.Interfaces.Repository;
 using BackOffice.WebApi.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +19,9 @@ public static class PedidoEndpoints
         })
             .WithName("CreatePedidoModel");
 
-        group.MapGet("/api/Pedidos", async (BackOfficeContext pedidoRepository) =>
+        group.MapGet("/", async (IPedidoRepository pedidoRepository) =>
         {
-            return pedidoRepository.Pedidos.ToList();
+            return await pedidoRepository.GetAll();
         })
             .WithName("GetPedidos");
     }

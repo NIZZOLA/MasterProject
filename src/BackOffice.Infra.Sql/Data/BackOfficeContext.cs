@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using BackOffice.Domain.Entities;
-using BackOffice.Infra.Sql.EntityConfig;
 
 namespace BackOffice.Infra.Sql.Data;
 

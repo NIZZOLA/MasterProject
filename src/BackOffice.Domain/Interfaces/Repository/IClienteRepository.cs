@@ -1,5 +1,7 @@
-﻿namespace BackOffice.Domain.Interfaces.Repository;
+﻿using BackOffice.Domain.Entities;
 
-public interface IClienteRepository: IBaseRepository
+namespace BackOffice.Domain.Interfaces.Repository;
+
+public interface IClienteRepository: IBaseRepository<ClienteModel>
 {
 }

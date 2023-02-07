@@ -1,6 +1,4 @@
 using BackOffice.Domain.Entities.Configuration;
-using BackOffice.Infra.Sql.Data;
-using Microsoft.EntityFrameworkCore;
 using ReceptorDePedido;
 using BackOffice.Infra.Sql;
 //using Serilog;

@@ -1,4 +1,6 @@
-﻿namespace BackOffice.Domain.Interfaces.Repository; 
+﻿using BackOffice.Domain.Entities;
 
-public interface IProdutoRepository : IBaseRepository
+namespace BackOffice.Domain.Interfaces.Repository; 
+
+public interface IProdutoRepository : IBaseRepository<ProdutoModel>
 { }

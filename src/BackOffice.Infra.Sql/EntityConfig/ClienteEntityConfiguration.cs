@@ -1,6 +1,5 @@
 ﻿using BackOffice.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Reflection.Metadata;
 
 namespace BackOffice.Infra.Sql.EntityConfig;
 
